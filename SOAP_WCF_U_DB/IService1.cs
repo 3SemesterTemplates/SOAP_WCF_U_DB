@@ -14,7 +14,19 @@ namespace SOAP_WCF_U_DB
     public interface IService1
     {
 
-        
+        [OperationContract]
+        List<Movie> GetMovie();
+
+        [OperationContract]
+        void AddMovie(Movie newFilm);
+
+        [OperationContract]
+        void DeleteMovie(Movie deleteFilm);
+
+        [OperationContract]
+        void UpdateMovie(int id, Movie film);
+
+
     }
 
 }

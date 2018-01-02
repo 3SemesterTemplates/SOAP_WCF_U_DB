@@ -12,22 +12,35 @@ namespace SOAP_WCF_U_DB
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        static List<Movie> ListOfMovies = new List<Movie>()
         {
-            return string.Format("You entered: {0}", value);
+            new Movie(){Id=1, Titel="Den glade Dame", Rating=3},
+            new Movie(){Id=2, Titel="Avengers", Rating=5},
+            new Movie(){Id=3, Titel="Harry Potter", Rating=4.5}
+        };
+
+
+        public void AddMovie(Movie newFilm)
+        {
+            ListOfMovies.Add(newFilm);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public void DeleteMovie(Movie deleteFilm)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            var film = ListOfMovies.Find(mov => mov.Id == deleteFilm.Id);
+            ListOfMovies.Remove(film);
+        }
+
+        public List<Movie> GetMovie()
+        {
+            return ListOfMovies;
+        }
+
+        public void UpdateMovie(int id, Movie film)
+        {
+            var nyfilm = ListOfMovies.Find(mov => mov.Id == film.Id);
+            nyfilm.Titel = film.Titel;
+            nyfilm.Rating = film.Rating;
         }
     }
 }
