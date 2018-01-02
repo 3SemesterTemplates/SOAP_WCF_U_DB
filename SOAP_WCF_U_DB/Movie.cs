@@ -22,5 +22,11 @@ namespace SOAP_WCF_U_DB
             Titel = titel;
             Rating = rating;
         }
+
+
+        public override string ToString()
+        {
+            return $"{nameof(Id)}: {Id}, {nameof(Titel)}: {Titel}, {nameof(Rating)}: {Rating}";
+        }
     }
 }
