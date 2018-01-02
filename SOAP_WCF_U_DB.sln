@@ -5,6 +5,15 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_WCF_U_DB", "SOAP_WCF_U_DB\SOAP_WCF_U_DB.csproj", "{C5BEFFC6-C293-432B-93CD-173E66431D8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPClient", "TCPClient\TCPClient.csproj", "{36A0340C-EBF5-40EC-A1A0-EDFC8E88EC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer", "TCPServer\TCPServer.csproj", "{F627A9D0-9ED9-43EF-88BF-701E7E3925F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP_Movie_Consumer", "SOAP_Movie_Consumer\SOAP_Movie_Consumer.csproj", "{9FEFEF71-FC2F-4A71-B3B9-26EF22B5EC8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5BEFFC6-C293-432B-93CD-173E66431D8B} = {C5BEFFC6-C293-432B-93CD-173E66431D8B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,18 @@ Global
 		{C5BEFFC6-C293-432B-93CD-173E66431D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5BEFFC6-C293-432B-93CD-173E66431D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5BEFFC6-C293-432B-93CD-173E66431D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A0340C-EBF5-40EC-A1A0-EDFC8E88EC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A0340C-EBF5-40EC-A1A0-EDFC8E88EC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A0340C-EBF5-40EC-A1A0-EDFC8E88EC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A0340C-EBF5-40EC-A1A0-EDFC8E88EC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F627A9D0-9ED9-43EF-88BF-701E7E3925F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F627A9D0-9ED9-43EF-88BF-701E7E3925F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F627A9D0-9ED9-43EF-88BF-701E7E3925F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F627A9D0-9ED9-43EF-88BF-701E7E3925F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEFEF71-FC2F-4A71-B3B9-26EF22B5EC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEFEF71-FC2F-4A71-B3B9-26EF22B5EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEFEF71-FC2F-4A71-B3B9-26EF22B5EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEFEF71-FC2F-4A71-B3B9-26EF22B5EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
